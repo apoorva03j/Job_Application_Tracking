@@ -1,0 +1,68 @@
+  .registrationForm {
+      margin-top: 7%;
+      margin-left: 25%;
+      width: 735px;
+      height: 500px;
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      background-color: #afc3c347;
+      border: solid #061f39;
+      border-radius: 5px;
+      color:#061f39;
+      overflow-x: hidden;
+      overflow: hidden;
+    }
+  
+    .h1t{
+      margin-top: 7%;
+      margin-bottom: 7%;
+      margin-left: 30%;
+    }
+    .Maindiv{
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .formGroup {
+      margin-left: 3%;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  
+    .div1{
+      margin-right: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .inputbox{
+      width: 300px;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-left: -5px;
+    }
+
+    .links{
+      text-decoration: none;
+      color: white;
+    }
+    
+    .btn{
+      background-color: #061f39;
+      color: white;
+      width: 100px;
+      font-size: medium;
+      margin-left: 40%;
+      margin-top: 5%;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    .btn[type='submit']:hover {
+      background-color: #0056b3;
+    }
+    
