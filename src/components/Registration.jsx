@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import streg from '../assets/css/streg.module.css';
 
 
 const Registration = () => {
+  const navigate = useNavigate();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [dateOfBirth, setDateOfBirth] = useState('');
@@ -27,7 +29,8 @@ const Registration = () => {
       if (response.data) {
         console.log('Data inserted successfully');
         window.alert("Thank you for registering! You will be redirected to Login Page!");
-        window.location.href="/";
+        navigate("/");
+
       } else {
         console.log('Error in data insertion');
         window.alert("An error occurred while saving your data!");

@@ -1,31 +1,36 @@
 import React from "react";
 import { useState} from "react";
+import { useNavigate } from "react-router-dom";
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import stlogin from '../assets/css/stlogin.module.css';
 function Login()
 {
+  const navigate = useNavigate();
     const [userName, setUsername] = useState("");
     const [passWord, setPassword] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-       
+        console.log("Hello");
+        
         try {
-           const response = await axios.get(
-             "http://localhost:3001/users?username=" + userName
-           );
-       
-           if (response.data.length === 0) {
-             alert("No user found with this username.");
-             return;
-           }
-       
-           const user = response.data[0];
-       
-           if (user.password === passWord) {
-             alert("Login successful!");
-             window.location.href='/userdash';
+          const response = await axios.get(
+            "http://localhost:3001/users?username=" + userName
+            );
+            console.log("Hello");
+            
+            if (response.data.length === 0) {
+              alert("No user found with this username.");
+              return;
+            }
+            
+            const user = response.data[0];
+            
+            if (user.password === passWord) {
+              alert("Login successful!");
+              navigate("/userdash");
+              console.log("redirect");
            } else {
              alert("Incorrect password. Please try again.");
            }
